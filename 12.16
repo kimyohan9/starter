@@ -1,0 +1,5 @@
+a = “hello world”
+
+dic ={ b : count(b) for b in a} 
+
+print(dic)
