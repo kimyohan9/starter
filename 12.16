@@ -63,8 +63,20 @@ exsample = ("kim","yohan","sunchang")
 
 a = {1,2,3,4,5,8,9}
 b = {2,4,6,7,9}
-print(a - b)
-
+print(a ^ b)
+ 
 8. 1부터 10까지의 숫자에 대해 각 숫자의 제곱을 값으로 갖는 딕셔너리를 생성하세요.
+number_list = range(1,11)
+result = {''}
+x**number_list for i in number_list:
+
+-----------------------------------------------------
+number_list = range(1,11)
+result = {i:i**i for i in number_list}
+
 9. 주어진 리스트에서 짝수만 선택하여 그 제곱값을 가진 새로운 리스트를 생성하세요.
+number_list = list(range(1,11))
+a=(i**i for i in number_list if i % 2==0)
+print(list(a))
+
 10. 여러 개의 리스트가 주어졌을 때, 이들을 하나의 리스트로 평탄화하는 함수를 작성하세요.
