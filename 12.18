@@ -11,7 +11,7 @@
 11. 딕셔너리를 입력받아 키와 값을 바꾼 새로운 딕셔너리를 반환하는 함수 **`swap_dict`**를 작성하세요.
 12. 기본 매개변수를 사용하여 인사말을 출력하는 함수 **`greet`**를 작성하세요. 이름이 주어지지 않으면 "Guest"라고 인사하도록 합니다.
 
-1. def say_hello(name)
+1. def say_hello(name):
     print(f"안녕하세요,{name}님!")
 
 say_hello("김요한")
@@ -21,5 +21,36 @@ say_hello("김요한")
 find_larger(5,4)
 
 3. def print_first_last(list):
-    print(list.pop(0),list.pop(-1))
+    print(list[0],list[-1])
 print_first_last("abcdefg")
+
+4. def evne_or_odd(number):
+    if number % 2 ==0:
+        print("even")
+    else:
+        print("odd")
+
+5. def to_uppercase(list):
+        for x in list:
+            result = list.upper()
+        return result
+to_uppercase("abcdefg")
+
+6. def add_numbers(num1,num2):
+        print(num1+num2)
+add_numbers(3,4)
+
+7. def sum_list(list)
+    for x in list:
+        count(list)
+
+8. def calculate_average(*num):
+    return int(sum(num) / len(num))
+
+9. list_len = lambda x: len(x)
+print(list_len("abcd"))
+10.
+11.
+12. def great(name="Guest"):
+    print(f"안녕하세요,{name}님!")
+
