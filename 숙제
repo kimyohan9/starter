@@ -20,7 +20,7 @@ original_list = [1, 2, 2, 3, 4, 4, 5]
 set1 = set(original_list)
 
 5. 2차원 리스트를 생성하는 리스트 컴프리헨션을 작성하세요. (예: 5x5 행렬)
-
+result = [[for list in range(1,5) for list in range(3)
 6. 주어진 문자열 리스트에서 길이가 5 이상인 문자열만 대문자로 변환하여 새로운 리스트를 만드세요.
 
 string_list = ['apple', 'banana', 'pear', 'grape', 'kiwi']
@@ -43,10 +43,15 @@ list = [x**2 for x in given_list if x % 2 == 0]
 
 10. 여러 개의 리스트가 주어졌을 때, 이들을 하나의 리스트로 평탄화하는 함수를 작성하세요.
 
+
 lists = [[1,2,3],[4,5],[6,7,8,9]]
 
+flatten_list = [x for sub_list in lists for x in sub_list]
+---------------------------------------------------------------------------
 def flattend(list):
+    result = []
     for x in list:
-    result.extend(x)
+        result.extend(x)
+    
     return result
   
