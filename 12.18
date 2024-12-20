@@ -1,56 +1,66 @@
-1. 사용자의 이름을 입력받아 "안녕하세요, [이름]님!"이라고 출력하는 함수 **`say_hello`**를 작성하세요.
-2. 두 개의 숫자를 입력받아 큰 수를 반환하는 함수 **`find_larger`**를 작성하세요.
-3. 리스트를 입력받아 그 리스트의 첫 번째 요소와 마지막 요소를 출력하는 함수 **`print_first_last`**를 작성하세요.
-4. 숫자를 하나 입력받아 그 숫자가 짝수인지 홀수인지 출력하는 함수 **`even_or_odd`**를 작성하세요.
-5. 문자열을 입력받아 그 문자열을 대문자로 변환하여 반환하는 함수 **`to_uppercase`**를 작성하세요.
-6. 두 숫자를 입력받아 더한 결과를 반환하는 함수 **`add_numbers`**를 작성하세요.
-7. 리스트를 입력받아 모든 요소의 합을 반환하는 함수 **`sum_list`**를 작성하세요. (내장 함수 sum을 사용하지 않고 구현해보세요.)
-8. 임의의 개수의 숫자를 입력받아 그 평균을 계산하는 함수 **`calculate_average`**를 작성하세요. (가변 인자를 사용하세요.)
-9. 문자열을 입력받아 그 문자열의 길이를 반환하는 람다 함수를 작성하세요.
-10. 재귀 함수를 사용하여 팩토리얼(n!)을 계산하는 함수 **`factorial`**을 작성하세요.
-11. 딕셔너리를 입력받아 키와 값을 바꾼 새로운 딕셔너리를 반환하는 함수 **`swap_dict`**를 작성하세요.
-12. 기본 매개변수를 사용하여 인사말을 출력하는 함수 **`greet`**를 작성하세요. 이름이 주어지지 않으면 "Guest"라고 인사하도록 합니다.
+# 1. 사용자의 이름을 입력받아 "안녕하세요, [이름]님!"이라고 출력하는 함수 **`say_hello`**를 작성하세요.
+# 2. 두 개의 숫자를 입력받아 큰 수를 반환하는 함수 **`find_larger`**를 작성하세요.
+# 3. 리스트를 입력받아 그 리스트의 첫 번째 요소와 마지막 요소를 출력하는 함수 **`print_first_last`**를 작성하세요.
+# 4. 숫자를 하나 입력받아 그 숫자가 짝수인지 홀수인지 출력하는 함수 **`even_or_odd`**를 작성하세요.
+# 5. 문자열을 입력받아 그 문자열을 대문자로 변환하여 반환하는 함수 **`to_uppercase`**를 작성하세요.
+# 6. 두 숫자를 입력받아 더한 결과를 반환하는 함수 **`add_numbers`**를 작성하세요.
+# 7. 리스트를 입력받아 모든 요소의 합을 반환하는 함수 **`sum_list`**를 작성하세요. (내장 함수 sum을 사용하지 않고 구현해보세요.)
+# 8. 임의의 개수의 숫자를 입력받아 그 평균을 계산하는 함수 **`calculate_average`**를 작성하세요. (가변 인자를 사용하세요.)
+# 9. 문자열을 입력받아 그 문자열의 길이를 반환하는 람다 함수를 작성하세요.
+# 10. 재귀 함수를 사용하여 팩토리얼(n!)을 계산하는 함수 **`factorial`**을 작성하세요.
+# 11. 딕셔너리를 입력받아 키와 값을 바꾼 새로운 딕셔너리를 반환하는 함수 **`swap_dict`**를 작성하세요.
+# 12. 기본 매개변수를 사용하여 인사말을 출력하는 함수 **`greet`**를 작성하세요. 이름이 주어지지 않으면 "Guest"라고 인사하도록 합니다.
 
-1. def say_hello(name):
+def say_hello(name):
     print(f"안녕하세요,{name}님!")
-
 say_hello("김요한")
-
-2. def find_larger(num1,num2):
+-------------------------------------------------------
+def find_larger(num1,num2):
       print(max(num1,num2))
 find_larger(5,4)
-
-3. def print_first_last(list):
+-------------------------------------------------------
+def print_first_last(list):
     print(list[0],list[-1])
 print_first_last("abcdefg")
-
-4. def evne_or_odd(number):
-    if number % 2 ==0:
+-------------------------------------------------------
+def even_or_odd(number):
+    if number % 2 == 0:
         print("even")
     else:
         print("odd")
 
-5. def to_uppercase(list):
-        for x in list:
-            result = list.upper()
-        return result
+even_or_odd(5)
+-------------------------------------------------------
+def to_uppercase(*list):
+    result = [x.upper() for x in list]
+    return result
 to_uppercase("abcdefg")
-
-6. def add_numbers(num1,num2):
+-------------------------------------------------------
+def add_numbers(num1,num2):
         print(num1+num2)
 add_numbers(3,4)
-
-7. def sum_list(list)
+-------------------------------------------------------
+def sum_list(list)
     for x in list:
         count(list)
-
-8. def calculate_average(*num):
+-------------------------------------------------------
+def calculate_average(*num):
     return int(sum(num) / len(num))
-
-9. list_len = lambda x: len(x)
+-------------------------------------------------------
+list_len = lambda x: len(x)
 print(list_len("abcd"))
-10.
-11.
-12. def great(name="Guest"):
+-------------------------------------------------------
+def swap_dict(dict):                       #딕셔너리를 입력받아
+    return {v:k for k,v in dict.items()}   #키와 값을 바꾼 새로운 딕셔너리를 반환
+swap_dict({"a":1,"b":2})
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ이거는 이해가 잘 안되서 팀원들과 코드카타로 해결
+new_dict = {}                #새로운 딕셔너리 생성
+for k,v in dict.items():     #기존 딕셔너리의 키와 값을 꺼내어
+    new_dict[v] = k          #새로운 딕셔너리에 값과 키를 저장
+    return new_dict          #새로운 딕셔너리 반환
+-------------------------------------------------------
+def great(name="Guest"):
     print(f"안녕하세요,{name}님!")
+great()
+
 
