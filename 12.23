@@ -1,6 +1,27 @@
-
-
-
+num_list=[2,3,4,5]
+lambda_def = lambda x: x**2 
+result = [lambda_def(x) for x in num_list]
+----------------------------------------------------
+sample_list=["abedfsad","sparta"]
+result2 = list(map(len,sample_list))
+print(result2)
+-----------------------------------------------------
+number = range(1,21)
+filtering = filter(lambda x: x % 2==0, number)
+result =list(filtering)
+print(result)
+-------------------------------------------------------
+from functools import reduce
+num_list=[2,3,4,5]
+result = reduce(lambda x ,y: x**2 + y**2 ,num_list)
+print(result)
+-----------------------------------------
+def factorial(n):
+    if n == - or n==1:
+        return 1
+    else:
+        return n *factorial(n-1)
+------------------------------------------------------
 class Person:
 
     def __init__(self, name, age):
